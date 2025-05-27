@@ -21,14 +21,11 @@ export default function LeadForm() {
     }
 
     try {
-      const res = await fetch(
-        "https://assess78.app.n8n.cloud/webhook-test/lead-capture",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const res = await fetch("https://error-tech.onrender.com/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       if (!res.ok) throw new Error("Failed to submit");
 
